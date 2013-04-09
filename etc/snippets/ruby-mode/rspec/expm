@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: expm
+# key: expm
+# --
+expect(${1:subject}).to match(/$0/)

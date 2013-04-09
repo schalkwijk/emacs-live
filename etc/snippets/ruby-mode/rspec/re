@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: re
+# key: re
+# --
+raise_error($1)$0

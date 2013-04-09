@@ -137,6 +137,7 @@
   is the result of test-form.(borrowed from anything.el)"
   `(let ((it ,test-form))
      (if it ,then-form ,@else-forms)))
+
 ;;; funcs
 (defun qj-init()
   "remove #<marker in no buffer> from `qj-marker-ring'."
@@ -163,7 +164,11 @@
 (defun qj-action-go(marker)
   "Go to location."
   (let ((buf (marker-buffer marker))
-        (pos (marker-position marker)))
+        (pos (marker-position marker))
+        (window (get-buffer-window (marker-buffer marker))))
+    (if (and (window-live-p window)
+                 (not (eq window (selected-window))))
+            (select-window window))
     (when buf
       (switch-to-buffer buf)
       (set-buffer buf)
@@ -177,7 +182,7 @@ by `quick-jump-go-back'"
   (when (not (ring-member qj-marker-ring (point-marker)))
     (ring-insert qj-marker-ring (point-marker)))
   (setq qj-current-marker (point-marker))
-  (message "a marker is pushed."))
+  (message "Marker pushed."))
 
 (defun quick-jump-go-back()
   "Go back in `qj-marker-ring'."
@@ -219,7 +224,7 @@ by `quick-jump-go-back'"
 (defun quick-jump-clear-all-marker()
   "clear all marker in `qj-marker-ring'."
   (interactive)
-  (message "clear all marker for joseph-quick-jump.")
+  (message "clear all marker for quick-jump.")
   (setq qj-previous-action-flag nil)
   (setq qj-current-marker nil)
   (while (not (ring-empty-p qj-marker-ring))

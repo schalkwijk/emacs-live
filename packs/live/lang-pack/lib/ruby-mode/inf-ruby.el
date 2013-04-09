@@ -159,7 +159,7 @@
 (defun inf-ruby-keys ()
   "Set local key defs for inf-ruby in ruby-mode"
   (define-key ruby-mode-map "\M-\C-x" 'ruby-send-definition)
-;  (define-key ruby-mode-map "\C-x\C-e" 'ruby-send-last-sexp)
+  ;(define-key ruby-mode-map "\C-x\C-e" 'ruby-send-last-sexp)
   (define-key ruby-mode-map "\C-c\C-b" 'ruby-send-block)
   (define-key ruby-mode-map "\C-c\M-b" 'ruby-send-block-and-go)
   (define-key ruby-mode-map "\C-c\C-x" 'ruby-send-definition)
@@ -277,7 +277,9 @@ of `ruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
                          (read-string "Run Ruby: " ruby-program-name)
                          ruby-program-name)))
   (if (not (comint-check-proc "*ruby*"))
-      (let ((cmdlist (ruby-args-to-list cmd)))
+      (let
+          ((cmdlist (ruby-args-to-list cmd)))
+        (rvm-activate-corresponding-ruby)
         (set-buffer (apply 'make-comint "ruby" (car cmdlist)
                            nil (cdr cmdlist)))
         (inferior-ruby-mode)))

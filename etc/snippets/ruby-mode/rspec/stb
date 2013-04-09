@@ -1,0 +1,5 @@
+#-*- require-final-newline: nil -*-
+#contributor: samuellopes
+#name : stub
+# --
+${1:subject}.stub(:${2:stub})$0

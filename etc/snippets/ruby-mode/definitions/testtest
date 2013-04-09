@@ -1,0 +1,6 @@
+# (let ((bogus (re-search-forward "def [^(]+")))
+#       (if (looking-at "(\\\(.*\\\))")
+#           (let ((list (split-string (match-string 1) ",")))
+#             (message "here")
+#             (mapconcat (lambda (value) (replace-regexp-in-string "[[:blank:]]*" "" value)) list "\n"))
+#      (message "")))

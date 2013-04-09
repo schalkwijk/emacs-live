@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: exptre
+# key: exptre
+# --
+expect { ${1:subject} }.to raise_error(${2:error})

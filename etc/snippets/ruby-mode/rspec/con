@@ -1,0 +1,11 @@
+#-*- require-final-newline: nil -*-
+#contributor: samuellopes <samuellopes89@gmail.com>
+#name : context (String)
+# --
+context "when ${1:description}" do
+
+  it "${2:description}" do
+    $0
+  end
+
+end

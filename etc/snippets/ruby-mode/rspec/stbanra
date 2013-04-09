@@ -1,0 +1,5 @@
+#-*- require-final-newline: nil -*-
+#contributor: samuellopes
+#name : stub and return
+# --
+${1:subject}.stub(:${2:stub}).and_return(${3:stub})

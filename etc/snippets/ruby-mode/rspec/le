@@ -1,0 +1,4 @@
+#-*- require-final-newline: nil -*-
+#name : let
+# --
+let(:${1:value}) { ${2:stub} }$0

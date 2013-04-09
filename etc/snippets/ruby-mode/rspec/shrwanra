@@ -1,0 +1,6 @@
+#-*- require-final-newline: nil -*-
+#contributor: samuellopes <samlopes89@gmail.com>
+#name: should_receive with and_return
+#key: shrwanra
+# --
+${1:subject}.should_receive(:${2:message}).with(${3:arguments}).and_return(${4:stub})$0

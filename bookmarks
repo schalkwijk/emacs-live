@@ -1,0 +1,71 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("prod-ops"
+ (filename . "~/dev/prod-ops/")
+ (front-context-string . "ops-config\n  drw")
+ (rear-context-string . "44 Mar 20 09:44 ")
+ (position . 335))
+("deal-catalog-validations"
+ (filename . "~/dev/deal-catalog/validations/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "44 Mar 27 21:11 ")
+ (position . 346))
+("emacs.d"
+ (filename . "~/.emacs.d/")
+ (front-context-string . ".gitignore\n  -rw")
+ (rear-context-string . "47 Mar  5 08:57 ")
+ (position . 346))
+("image-service"
+ (filename . "~/dev/image-service/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "42 Mar 13 12:44 ")
+ (position . 338))
+("orders"
+ (filename . "~/dev/orders/")
+ (front-context-string . ".rspec\n  -rw-r--")
+ (rear-context-string . " 8 Mar  8 13:14 ")
+ (position . 787))
+("groupon"
+ (filename . "~/dev/groupon/")
+ (front-context-string)
+ (rear-context-string . "Mar  8 09:53 ..\n")
+ (position . 247))
+("todo.org"
+ (filename . "~/todo.org")
+ (front-context-string . "ompletion)\n** si")
+ (rear-context-string . " tag (with IDO c")
+ (position . 2172))
+("voucher-inventory-service"
+ (filename . "~/dev/voucher-inventory/service/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "42 Mar  4 18:24 ")
+ (position . 347))
+("deal-catalog-service"
+ (filename . "~/dev/deal-catalog/service/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "76 Mar  5 17:50 ")
+ (position . 342))
+("live-packs"
+ (filename . "~/.live-packs/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "10 Mar  5 23:24 ")
+ (position . 328))
+("audience"
+ (filename . "~/dev/audience/")
+ (front-context-string)
+ (rear-context-string . "84 Mar  1 14:11 ")
+ (position . 512)
+ (annotation . "Audience service project - no longer in active development."))
+("voucher-inventory-client"
+ (filename . "~/dev/voucher-inventory/client/")
+ (front-context-string)
+ (rear-context-string . "82 Mar  4 18:13 ")
+ (position . 420))
+("deal-catalog-client"
+ (filename . "~/dev/deal-catalog/client/")
+ (front-context-string)
+ (rear-context-string . "16 Mar  4 18:26 ")
+ (position . 508))
+)

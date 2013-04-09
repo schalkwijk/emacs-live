@@ -114,7 +114,7 @@
  live-backups-dir  (file-name-as-directory (concat live-tmp-dir  "backups"))
  live-custom-dir   (file-name-as-directory (concat live-etc-dir  "custom"))
  live-load-pack-dir nil
- live-disable-zone nil)
+ live-disable-zone t)
 
 ;; create tmp dirs if necessary
 (make-directory live-etc-dir t)
@@ -143,6 +143,46 @@
        (dev-dir  (file-name-as-directory "dev")))
   (setq live-packs (mapcar (lambda (p) (concat live-dir p)) pack-names) )
   (setq live-dev-pack-list (mapcar (lambda (p) (concat dev-dir p)) pack-names) ))
+
+;;personal packs
+(live-add-packs '(~/.live-packs/window-numbering-pack
+                  ~/.live-packs/auto-complete-pack
+                  ~/.live-packs/flymake-pack
+                  ~/.live-packs/ruby-block-pack
+                  ~/.live-packs/linum-pack
+                  ~/.live-packs/single-key-kbd-pack
+                  ~/.live-packs/rvm-pack
+                  ~/.live-packs/rspec-pack
+                  ~/.live-packs/ack-and-a-half-pack
+                  ~/.live-packs/doremi-pack
+                  ~/.live-packs/transpose-frame-pack
+                  ~/.live-packs/handlebars-mode-pack
+                  ~/.live-packs/magit-pack
+                  ~/.live-packs/git-mode-pack
+                  ~/.live-packs/js-mode-pack
+                  ~/.live-packs/nginx-mode-pack
+                  ~/.live-packs/powerline-pack
+                  ~/.live-packs/multiple-cursors-pack
+                  ~/.live-packs/jump-char-pack
+                  ~/.live-packs/key-chord-pack
+                  ~/.live-packs/region-bindings-pack
+                  ~/.live-packs/dired-details-pack
+                  ~/.live-packs/expand-regions-pack
+                  ~/.live-packs/change-inner-pack
+                  ~/.live-packs/yard-mode-pack
+                  ~/.live-packs/fringe-helper-pack
+                  ~/.live-packs/git-gutter-pack
+                  ~/.live-packs/git-gutter-fringe-pack
+                  ~/.live-packs/ido-ubiquitous-pack
+                  ~/.live-packs/etags-select-pack
+                  ~/.live-packs/simp-pack
+                  ~/.live-packs/go-pack
+                  ~/.live-packs/auto-complete-etags-pack
+                  ~/.live-packs/phi-search-pack
+                  ~/.live-packs/dash-pack
+                  ~/.live-packs/multifiles-pack
+                  ~/.live-packs/random-pack
+                  ))
 
 ;; Helper fn for loading live packs
 
@@ -211,7 +251,8 @@
 (if (not live-disable-zone)
     (add-hook 'term-setup-hook 'zone))
 
-(if (not custom-file)
-    (setq custom-file (concat live-custom-dir "custom-configuration.el")))
+(setq custom-file "~/.emacs-custom.el")
 (when (file-exists-p custom-file)
   (load custom-file))
+
+(load custom-file 'noerror)

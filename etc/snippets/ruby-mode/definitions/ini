@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: def initialize(args)
+# key: ini
+# --
+def initialize($1)
+${1:$
+(if (not (= (length text) 0))
+(let
+    ((indent (make-string (current-column) 32))
+     (args (delq nil (mapcar '(lambda (arg) (let ((cleanarg (replace-regexp-in-string "[[:blank:]]*" "" arg))) (and (not (= (length cleanarg)  0)) cleanarg))) (split-string text ",")))))
+   (mapconcat
+   '(lambda (arg)
+                    (if (not (= (length arg) 0))
+                    (let ((cleanarg (nth 0 (split-string arg "=" t))))  (concat (if (not (string= arg (nth 0 args))) (concat indent "@") (concat "@" "")) cleanarg " = " cleanarg))))
+    args "\n" )))
+}$0
+end

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: expma
+# key: expma
+# --
+expect(${1:subject}).to match_array([$0])

@@ -1,0 +1,18 @@
+#-*- require-final-newline: nil -*-
+#contributor: gary <ge.iams@gmail.com>
+#name : describe (Controller)
+# --
+require "spec_helper"
+require "${1:$(mapconcat 'identity (mapcar (lambda (x) (if (> (length x) 0) (concat (downcase (substring x 0 1)) (let ((case-fold-search nil)) (replace-regexp-in-string (rx upper) (lambda (x) (concat "_" (downcase x))) x 1 nil nil 1))))) (split-string text "::")) "/")}"
+
+describe ${1:controller} do
+
+  describe "$2" do
+
+    it "$3" do
+      $0
+    end
+
+  end
+
+end

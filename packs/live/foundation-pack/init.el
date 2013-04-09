@@ -15,11 +15,11 @@
 (live-load-config-file "smex-conf.el")
 (live-load-config-file "tramp-conf.el")
 (live-load-config-file "mouse-conf.el")
-(live-load-config-file "ibuffer-git-conf.el")
-(live-load-config-file "key-chord-conf.el")
 (live-load-config-file "window-number-conf.el")
 (live-load-config-file "recentf-conf.el")
-(live-load-config-file "elisp-slime-nav-conf.el")
+(live-load-config-file "buffer-move-conf.el")
+
+
 (live-load-config-file "popwin-conf.el")
 (live-load-config-file "shell-conf.el")
 (live-load-config-file "spelling-conf.el")
@@ -28,6 +28,10 @@
 (live-load-config-file "zone-conf.el")
 (live-load-config-file "monkey-patch.el")
 
+
+;;(live-load-config-file "ibuffer-git-conf.el")
+;;(live-load-config-file "key-chord-conf.el")
+;;(live-load-config-file "elisp-slime-nav-conf.el")
 
 (when (eq system-type 'darwin)
   (live-load-config-file "osx.el"))

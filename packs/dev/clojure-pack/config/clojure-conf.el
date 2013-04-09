@@ -24,7 +24,7 @@
 (eval-after-load 'find-file-in-project
   '(add-to-list 'ffip-patterns "*.clj"))
 
-(require 'clojure-mode)
+(autoload 'clojure-mode)
 
 (add-hook 'clojure-mode-hook
           (lambda ()

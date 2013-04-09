@@ -1,0 +1,7 @@
+# name: docstring
+# key: doc
+#-*- require-final-newline: nil -*-
+# --
+# $1
+# @param [$2] verbosity $3
+# @return [$4] $0

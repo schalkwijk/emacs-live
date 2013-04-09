@@ -1,0 +1,8 @@
+# name: docstring
+# key: doc
+#-*- require-final-newline: nil -*-
+# --
+# @param [] test 
+# @param [] this 
+# @param [] out 
+# @return []
