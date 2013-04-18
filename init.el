@@ -157,8 +157,8 @@
                   ~/.live-packs/doremi-pack
                   ~/.live-packs/transpose-frame-pack
                   ~/.live-packs/handlebars-mode-pack
-                  ~/.live-packs/magit-pack
                   ~/.live-packs/git-mode-pack
+                  ~/.live-packs/magit-pack
                   ~/.live-packs/js-mode-pack
                   ~/.live-packs/nginx-mode-pack
                   ~/.live-packs/powerline-pack

@@ -129,15 +129,7 @@ of `jruby-program-name').  Runs the hooks `inferior-ruby-mode-hook'
      (define-key ruby-mode-map "\C-c\C-s" 'ruby-eval-line)
      (define-key ruby-mode-map "\C-c\C-b" 'ruby-send-block-or-line)
      ;; run the current test function using F8 key
-     (define-key ruby-mode-map [f8] 'ruby-test-function)
-
-     ;; I bind the above to ^h^h, an odd choice, because that's easy to
-     ;; type after reaching the line with ^p or ^n.
-     (global-set-key "\C-h\C-h" 'ruby-visit-source)
-     (global-set-key "\C-c\C-d" 'run-ruby)
-     (global-set-key "\C-c\C-f" 'run-jruby)
-     )
-  )
+     (define-key ruby-mode-map [f8] 'ruby-test-function)))
 
 
 ;; Overwrite this one to make sure it does the same as I want it too

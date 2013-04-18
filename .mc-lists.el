@@ -7,19 +7,26 @@
         backward-sexp
         backward-up-list
         comint-delchar-or-eof-or-kill-buffer
+        comment-dwim
         cua-copy-region
         cua-cut-region
         cua-paste
         cua-paste-pop
         cua-scroll-down
+        dired-mark
+        dired-toggle-marks
         down-list
         forward-sexp
         go-mode-insert-and-indent
         indent-for-tab-command
+        isearch-abort
         jump-char-forward
         jump-char-process-char
         kill-region
         kill-sexp
+        live-delete-whitespace-except-one
+        live-paredit-forward
+        live-paredit-forward-kill-sexp
         mark-defun
         mf/mirror-region-in-multifile
         nxml-electric-slash
@@ -48,6 +55,7 @@
         undefined
         yaml-electric-backspace
         yaml-electric-bar-and-angle
+        yas-expand
         yas/next-field-or-maybe-expand
         yas/skip-and-clear-or-delete-char
         zap-up-to-char
@@ -56,6 +64,7 @@
 (setq mc/cmds-to-run-once
       '(
         cua-delete-region
+        dired-maybe-insert-subdir
         magit-goto-next-sibling-section
         mc/insert-numbers
         ))

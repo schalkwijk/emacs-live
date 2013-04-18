@@ -128,8 +128,8 @@
 (define-key org-mode-map (kbd "C-M-i")    'org-shiftup)
 (define-key org-mode-map (kbd "C-M-k")    'org-shiftdown)
 
-;;browse kill ring (visual paste)
-(global-set-key (kbd "M-y") 'browse-kill-ring)
+;; browse kill ring (visual paste)
+;; (global-set-key (kbd "M-y") 'browse-kill-ring)
 
 ;;make C-] and M-] cut and copy respectively
 (global-set-key (kbd "C-]") 'kill-region)
