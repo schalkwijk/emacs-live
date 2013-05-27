@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        align-regexp
         backward-kill-sexp
         backward-sexp
         backward-up-list
@@ -24,6 +25,7 @@
         jump-char-process-char
         kill-region
         kill-sexp
+        live-backwards-kill-line
         live-delete-whitespace-except-one
         live-paredit-forward
         live-paredit-forward-kill-sexp
@@ -32,6 +34,8 @@
         nxml-electric-slash
         open-line-below
         org-kill-line
+        org-return-indent
+        org-self-insert-command
         other-frame
         paredit-backward-kill-word
         paredit-doublequote
@@ -41,6 +45,7 @@
         paredit-kill
         paredit-newline
         paredit-open-round
+        paredit-semicolon
         ruby-backward-sexp
         ruby-electric-bar
         ruby-electric-close-matching-char
@@ -63,8 +68,10 @@
 
 (setq mc/cmds-to-run-once
       '(
+        beginning-of-buffer
         cua-delete-region
         dired-maybe-insert-subdir
+        ess-eval-function-or-paragraph-and-step
         magit-goto-next-sibling-section
         mc/insert-numbers
         ))

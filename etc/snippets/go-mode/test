@@ -1,0 +1,7 @@
+#-*- require-final-newline: nil -*-
+#name : func test
+#key  : test
+# --
+func (s *${1:My}TestSuite) Test${2:Behavior}(t *gocheck.C) {
+     $0
+}

@@ -182,6 +182,7 @@
                   ~/.live-packs/dash-pack
                   ~/.live-packs/multifiles-pack
                   ~/.live-packs/random-pack
+                  ~/.live-packs/visual-regexp-pack
                   ))
 
 ;; Helper fn for loading live packs

@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("uber_deploy"
+(("uber-deploy-dashboard"
+ (filename . "~/dev/prod-ops/uber_deploy_dashboard/")
+ (front-context-string . "lib\n  -rw-r--r--")
+ (rear-context-string . "36 May 15 17:32 ")
+ (position . 701))
+("deal-catalog-deploy"
+ (filename . "~/dev/deal-catalog/deploy/")
+ (front-context-string . "Gemfile.lock\n  -")
+ (rear-context-string . "57 Apr 17 11:01 ")
+ (position . 716))
+("uber_deploy"
  (filename . "~/dev/prod-ops/uber_deploy/")
  (front-context-string . "README.md\n  drwx")
  (rear-context-string . "76 Apr 17 12:18 ")
