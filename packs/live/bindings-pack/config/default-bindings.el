@@ -18,14 +18,6 @@
 ;;w - window and buffer shortcuts
 
 
-;; Should be able to eval-and-replace anywhere.
-(global-set-key (kbd "C-c e") 'eval-and-replace)
-
-;; winner undo and redo
-(global-set-key (kbd "C-c b") 'winner-undo)
-(define-key nrepl-interaction-mode-map (kbd "C-c b") 'winner-undo)
-(global-set-key (kbd "C-c f") 'winner-redo)
-
 ;; Git Gutter
 (global-set-key (kbd "C-c g g") 'git-gutter:toggle)
 
@@ -34,10 +26,6 @@
 (global-set-key (kbd "C-c g n") 'git-gutter:next-diff)
 (global-set-key (kbd "C-c g d") 'git-gutter:popup-diff)
 (global-set-key (kbd "C-c g r") 'git-gutter:revert-hunk)
-
-;;text manipulation shortcuts
-(global-set-key (kbd "C-c t b") 'untabify-buffer)
-(global-set-key (kbd "C-c t r") 'untabify)
 
 ;;emacs-lisp shortcuts
 (global-set-key (kbd "C-c m s") 'eval-and-replace) ;swap
@@ -49,7 +37,6 @@
 (global-set-key (kbd "C-c m r") 'eval-region)
 
 (global-set-key (kbd "C-c n e b") 'nrepl-eval-buffer)
-
 
 
 ;;funky characters
@@ -64,15 +51,9 @@
 (global-set-key (kbd "C-c i p") (lambda () (interactive) (insert "£")))
 
 (global-set-key (kbd "C-c j p") 'quick-jump-go-back)
-(global-set-key (kbd "C-c j b") 'quick-jump-go-back)
 (global-set-key (kbd "C-c j m") 'quick-jump-push-marker)
 (global-set-key (kbd "C-c j n") 'quick-jump-go-forward)
-(global-set-key (kbd "C-c j f") 'quick-jump-go-forward)
 (global-set-key (kbd "C-c j c") 'quick-jump-clear-all-marker)
-
-;;diff shortcuts
-(global-set-key (kbd "C-c d f") 'diff-buffer-with-file)
-
 
 (global-set-key (kbd "C-c s t") 'live-show-ansi-terminal)
 (global-set-key (kbd "C-c s n") 'live-new-ansi-terminal)
@@ -81,8 +62,8 @@
 ;;window and buffer movement
 (global-set-key (kbd "C-c w s") 'swap-windows)
 (global-set-key (kbd "C-c w r") 'rotate-windows)
-(global-set-key (kbd "C-c w p") 'buf-move-up)
 (global-set-key (kbd "C-c w n") 'buf-move-down)
+(global-set-key (kbd "C-c w p") 'buf-move-up)
 (global-set-key (kbd "C-c w b") 'buf-move-left)
 (global-set-key (kbd "C-c w f") 'buf-move-right)
 (global-set-key (kbd "C-c w .") 'shrink-window-horizontally)
@@ -136,17 +117,8 @@
 ;;redefine help shortcut
 ;; (global-set-key (kbd "M-h") 'help-command)
 
-;;allow the deletion of words:
-;;backward kill word (forward kill word is M-d)
-(global-set-key (kbd "C-\\") 'backward-kill-word)
-(define-key ido-file-completion-map (kbd "C-\\") 'backward-kill-word)
-(define-key paredit-mode-map (kbd "C-\\") 'paredit-backward-kill-word)
-
 ;;kill line backwards
 (global-set-key (kbd "M-k") 'live-backwards-kill-line)
-
-;;kill regions
-(global-set-key (kbd "C-x C-k") 'kill-region)
 
 ;;set the mark
 (global-set-key (kbd "C-SPC") 'set-mark-command)
@@ -172,9 +144,6 @@
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
-;; comment region
-(global-set-key (kbd "M-/") 'comment-or-uncomment-region)
-
 (global-set-key (kbd "C-s")   'isearch-forward)
 (global-set-key (kbd "C-r")   'isearch-backward)
 (global-set-key (kbd "C-M-s") 'isearch-forward-regexp)
@@ -193,13 +162,9 @@
 
 ;; Window switching.
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
-(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
 ;; If you want to be able to M-x without meta
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
-
-;; Magit
-(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Activate occur easily inside isearch
 (define-key isearch-mode-map (kbd "C-o")
@@ -207,14 +172,9 @@
     (let ((case-fold-search isearch-case-fold-search))
       (occur (if isearch-regexp isearch-string (regexp-quote isearch-string))))))
 
-;; Ace jump mode
-(global-set-key (kbd "C-o") 'ace-jump-mode)
-
 ;; Show documentation/information with M-RET
 (define-key lisp-mode-shared-map (kbd "M-RET") 'live-lisp-describe-thing-at-point)
 (define-key nrepl-mode-map (kbd "M-RET") 'nrepl-doc)
 (define-key nrepl-interaction-mode-map (kbd "M-RET") 'nrepl-doc)
 
 (global-set-key (kbd "C-x o") 'win-switch-dispatch)
-
-(global-set-key (kbd "C-x !") 'live-server-kill-terminal)

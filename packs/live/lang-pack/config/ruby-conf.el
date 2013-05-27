@@ -12,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 
 ;;easy hash-rocket insertion
-(define-key ruby-mode-map (kbd "C-c r") " => ")
+(define-key ruby-mode-map (kbd "C-c C-r") " => ")
 
 (defun ruby-interpolate ()
   "In a double quoted string, interpolate."
