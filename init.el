@@ -183,6 +183,8 @@
                   ~/.live-packs/multifiles-pack
                   ~/.live-packs/random-pack
                   ~/.live-packs/visual-regexp-pack
+                  ~/.live-packs/ido-vertical-mode-pack
+                  ~/.live-packs/ido-flx-pack
                   ))
 
 ;; Helper fn for loading live packs

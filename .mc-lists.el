@@ -7,6 +7,7 @@
         backward-kill-sexp
         backward-sexp
         backward-up-list
+        change-inner
         comint-delchar-or-eof-or-kill-buffer
         comment-dwim
         cua-copy-region
@@ -58,6 +59,7 @@
         smex
         toggle-kbd-macro-recording-on
         undefined
+        upcase-region
         yaml-electric-backspace
         yaml-electric-bar-and-angle
         yas-expand
@@ -74,4 +76,5 @@
         ess-eval-function-or-paragraph-and-step
         magit-goto-next-sibling-section
         mc/insert-numbers
+        org-beginning-of-line
         ))
